@@ -7,7 +7,7 @@
 {{HTML::script(dirTemaToko().'olsonkart/assets/js/jquery.countdown.min.js')}}
 {{HTML::script(dirTemaToko().'olsonkart/assets/js/jquery.navgoco.min.js')}}
 {{HTML::script(dirTemaToko().'olsonkart/assets/js/filter.js')}}
-{{HTML::script(dirTemaToko().'olsonkart/assets/js/respond.min.jss')}}
+{{HTML::script(dirTemaToko().'olsonkart/assets/js/respond.min.js')}}
 {{HTML::script(dirTemaToko().'olsonkart/assets/js/html5shiv.js')}}
 {{HTML::script(dirTemaToko().'olsonkart/assets/js/jquery.flexslider.js')}}
 {{HTML::script(dirTemaToko().'olsonkart/assets/js/shop.js')}}
