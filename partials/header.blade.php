@@ -4,7 +4,7 @@
        <div class="col-md-2 col-sm-2" style="width: auto;">
           <!-- Logo -->
           <div class="logo">
-             <h1><a href="{{URL::to('/')}}">{{-- shortText(Theme::place('title'),26) --}}</a></h1>
+             <h1><a href="{{URL::to('/')}}">{{ shortText(Theme::place('title'),26) }}</a></h1>
           </div>
        </div>
        
@@ -17,7 +17,7 @@
                 <a href="{{URL::to('member')}}">My Account</a>
                 <a href="{{URL::to('logout')}}" >Logout</a>
             @endif
-             {{$ShoppingCart}}
+             <span id='shoppingcartplace'>{{$ShoppingCart}}</span>
           </div>
        </div>
        

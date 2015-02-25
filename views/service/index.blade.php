@@ -26,7 +26,7 @@
                       </div>
                       <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
-                          {{$service->refund}}
+                          {{$service->tos}}
                         </div>
                       </div>
                     </div>
@@ -39,7 +39,7 @@
                         </h4>
                       </div>
                       <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">{{$service->privacy}}
+                        <div class="panel-body">{{$service->refund}}
                         </div>
                       </div>
                     </div>
@@ -53,7 +53,7 @@
                       </div>
                       <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
-                          {{$service->tos}}
+                          {{$service->privacy}}
                         </div>
                       </div>
                     </div>

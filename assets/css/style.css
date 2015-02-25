@@ -232,55 +232,55 @@ strong{
 }
 
 .carousel .item{
-    animation-duration:3s;
-    animation-delay:0.5s;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-duration: 3s;
-    -moz-animation-delay: 0.5s;
-    -ms-animation-duration: 3s;
-    -ms-animation-delay: 0.5s;
-    -o-animation-duration: 3s;    
-    -o-animation-delay: 0.5s;    
+	animation-duration:3s;
+	animation-delay:0.5s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 0.5s;
+	-ms-animation-duration: 3s;
+	-ms-animation-delay: 0.5s;
+	-o-animation-duration: 3s;    
+	-o-animation-delay: 0.5s;    
 }
 
 .carousel .carousel-caption h2{
-    animation-duration:2s;
-    animation-delay:1s;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-delay: 1s;
-    -moz-animation-duration: 2s;
-    -moz-animation-delay: 1s;
-    -ms-animation-duration: 2s;
-    -ms-animation-delay: 1s;
-    -o-animation-duration: 2s;    
-    -o-animation-delay: 1s;    
+	animation-duration:2s;
+	animation-delay:1s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-duration: 2s;
+	-moz-animation-delay: 1s;
+	-ms-animation-duration: 2s;
+	-ms-animation-delay: 1s;
+	-o-animation-duration: 2s;    
+	-o-animation-delay: 1s;    
 }
 
 .carousel .carousel-caption p{
-    animation-duration:2s;
-    animation-delay:1s;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-delay: 1s;
-    -moz-animation-duration: 2s;
-    -moz-animation-delay: 1s;
-    -ms-animation-duration: 2s;
-    -ms-animation-delay: 1s;
-    -o-animation-duration: 2s;    
-    -o-animation-delay: 1s;      
+	animation-duration:2s;
+	animation-delay:1s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-duration: 2s;
+	-moz-animation-delay: 1s;
+	-ms-animation-duration: 2s;
+	-ms-animation-delay: 1s;
+	-o-animation-duration: 2s;    
+	-o-animation-delay: 1s;      
 }
 
 .carousel .carousel-caption a{
-    animation-duration:2s;
-    animation-delay:1s;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-delay: 1s;
-    -moz-animation-duration: 2s;
-    -moz-animation-delay: 1s;
-    -ms-animation-duration: 2s;
-    -ms-animation-delay: 1s;
-    -o-animation-duration: 2s;    
-    -o-animation-delay: 1s;    
+	animation-duration:2s;
+	animation-delay:1s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-duration: 2s;
+	-moz-animation-delay: 1s;
+	-ms-animation-duration: 2s;
+	-ms-animation-delay: 1s;
+	-o-animation-duration: 2s;    
+	-o-animation-delay: 1s;    
 }
 
 .carousel .carousel-control span{
@@ -396,7 +396,7 @@ strong{
 	background: transparent;
 }
 
-.ddsubmenustyle{	
+.ddsubmenustyle{    
    border:0px;
    box-shadow:0px 0px 1px #888;
 }
@@ -407,7 +407,7 @@ strong{
 	position: absolute;
 	left: 0;
 	top: 0;
-	list-style-type: none;	
+	list-style-type: none;  
 }
 
 
@@ -1951,27 +1951,27 @@ footer .copy{
 /* Mobile phones */
 @media (max-width: 480px){
    .carousel .carousel-caption{
-      top:20px !important;
-      bottom:0px !important;
+	  top:20px !important;
+	  bottom:0px !important;
    }
    .carousel .carousel-caption h2{
-      font-size:13px !important;
+	  font-size:13px !important;
    }
    .carousel .carousel-caption p{
-      display:none;
-      font-size:18px !important;
+	  display:none;
+	  font-size:18px !important;
    } 
    .carousel .carousel-caption .btn{
-      display:none;
+	  display:none;
    }
    .carousel .carousel-control span{
-      display:inline-block;
-      background:#111;
-      border-radius:50px;
-      height:50px;
-      width:50px;
-      line-height:45px;
-      text-align:center;
+	  display:inline-block;
+	  background:#111;
+	  border-radius:50px;
+	  height:50px;
+	  width:50px;
+	  line-height:45px;
+	  text-align:center;
    }     
 	.countdown{
 		width:250px !important;
@@ -1985,64 +1985,64 @@ footer .copy{
 		font-size:10px !important;
 	}   
    .carousel-indicators{
-      display:none;
+	  display:none;
    }
 }
 
 /* Tablets */
 @media (max-width: 767px){
    .container{
-      width:100%;
+	  width:100%;
    }
    .carousel .carousel-caption{
-      bottom:30px !important;
+	  bottom:30px !important;
    }
    .carousel .carousel-caption h2{
-      font-size:25px !important;
+	  font-size:25px !important;
    }
    .carousel .carousel-caption p{
-      font-size:18px !important;
-      display:none;
+	  font-size:18px !important;
+	  display:none;
    } 
    .carousel .carousel-control span{
-      display:inline !important;
-      background:transparent;
-      border-radius:0px;
-      height:0px;
-      width:0px;
-      line-height:0;
-      text-align:right;
+	  display:inline !important;
+	  background:transparent;
+	  border-radius:0px;
+	  height:0px;
+	  width:0px;
+	  line-height:0;
+	  text-align:right;
    }  
    .header{
-      height:auto;
-      padding:15px 0px;
+	  height:auto;
+	  padding:15px 0px;
    }  
    .header .logo{
-      text-align:center;
-      padding-bottom:10px;
+	  text-align:center;
+	  padding-bottom:10px;
    }
    .cta h5{
-      line-height:30px;
-      margin-bottom:15px;
+	  line-height:30px;
+	  margin-bottom:15px;
    }
    .cta .cta-buttons{
-      float:none !important;
+	  float:none !important;
    }
    .cta .btn{
-      margin-bottom:0px !important;
-      max-width:150px;
+	  margin-bottom:0px !important;
+	  max-width:150px;
    }   
    .catchy .report-data{
-      margin-bottom:15px;
-      padding-bottom:15px;
-      border-bottom:1px dashed #eee;
+	  margin-bottom:15px;
+	  padding-bottom:15px;
+	  border-bottom:1px dashed #eee;
    }
 	.countdown{
 		width:350px;
 	}
 	
 	.countdown_amount {
-		font-size:30px;	
+		font-size:30px; 
 	}
 }
 
@@ -2057,26 +2057,26 @@ footer .copy{
 		margin:18px auto;
 	}
 	.navis select { 
-        display: inline-block; 
+		display: inline-block; 
 		width:100%;
    }
    .carousel .carousel-caption{
-      bottom:20px;
+	  bottom:20px;
    }
    .carousel .carousel-caption h2{
-      font-size:40px;
+	  font-size:40px;
    }
    .carousel .carousel-caption p{
-      font-size:22px;
+	  font-size:22px;
    }   
    .cta .btn{
-      margin-bottom:10px;
+	  margin-bottom:10px;
    }
    .catchy .report{
-      margin:20px 0px 0px 0px; 
+	  margin:20px 0px 0px 0px; 
    }
    .sidey{
-      margin-top:50px;
+	  margin-top:50px;
    }
 }
 
@@ -2152,9 +2152,9 @@ footer .copy{
 
 /* button bootstap */
 .btn-info {
-color: #fff;
-background-color: #5bc0de;
-border-color: #46b8da;
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
 }
 
 .btn-info:hover,
@@ -2162,7 +2162,31 @@ border-color: #46b8da;
 .btn-info:active,
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
-  color: #ffffff;
-  background-color: #39b3d7;
-  border-color: #269abc;
+	color: #ffffff;
+	background-color: #39b3d7;
+	border-color: #269abc;
+}
+
+.sidebar-items form input[type="submit"]{
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-moz-user-select: none;
+	margin: 5px 0px;
+	color: #FFF;
+	background-color: #5BC0DE;
+	border-color: #46B8DA;
+}
+.sidebar-items form input[type="submit"]:hover{
+	color: #ffffff;
+	background-color: #39b3d7;
+	border-color: #269abc;
 }

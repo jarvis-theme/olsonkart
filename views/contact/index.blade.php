@@ -54,7 +54,7 @@ Terjadi kesalahan dalam menyimpan data.<br><br>
                                 </div>
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Content</label>
-                                  <textarea class="form-control"  name="message" rows="3"></textarea>
+                                  <textarea class="form-control"  name="messageKontak" rows="3"></textarea>
                                 </div>                        
                                 <button type="submit" class="btn btn-info">Send</button>
                                 <button type="reset" class="btn btn-default">Reset</button>
