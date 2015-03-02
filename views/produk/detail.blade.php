@@ -176,7 +176,7 @@
 		 </div>
 		</div>
 
-		@if(count($produklain as $myproduk) > 0)
+		@if(count($produklain) > 0)
 		<!-- Recent posts CarouFredSel Starts -->
 		<div class="recent-posts blocky">
 			<div class="container">

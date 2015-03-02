@@ -20,7 +20,7 @@ define(['jquery','jq_ui','bootstrap','caroufredsel','fancybox','noty'], function
 			$('#flexslider-product .slides a').fancybox();
 			carouselProduk();
 
-			/* Ecommerce single item carousel */
+			// Single item carousel 
 			$('.ecarousel').carousel({
 			   interval: 8000,
 			   pause: "hover"

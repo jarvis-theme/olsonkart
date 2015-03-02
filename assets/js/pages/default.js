@@ -1,9 +1,12 @@
-define(['jquery','bootstrap','levelmenu','flexslider','navgoco'], function($)
+define(['jquery','bootstrap','flexslider','levelmenu','navgoco'], function($)
 {
 	return new function(){
 		var self = this;
 		self.run = function(){
-			/* Scroll to Top */
+			// Sidebar menu
+			$('.sidey .nav').navgoco();
+
+			// Scroll to Top
 			$(".totop").hide();
 			$(window).scroll(function(){
 				if ($(this).scrollTop()>300){
@@ -17,26 +20,23 @@ define(['jquery','bootstrap','levelmenu','flexslider','navgoco'], function($)
 				$('body,html').animate({scrollTop: 0}, 500);
 			});
 
-			// Sidebar menu
-    		$('.sidey .nav').navgoco();
-
-			/* Support */
+			// Support
 			$("#slist a").click(function(e){
 			   e.preventDefault();
 			   $(this).next('p').toggle(200);
 			});
 
-			/* Careers */
+			// Careers
 			$('#myTab a').click(function (e) {
 				e.preventDefault()
 				$(this).tab('show')
 			});
 
-			/* Navigation Menu */
+			// Navigation Menu
 			ddlevelsmenu.setup("ddtopmenubar", "topbar");
 
-			/* Dropdown Select */
-			/* Navigation (Select box) */
+			// Dropdown Selec
+			// Navigation (Select box)
 			// Create the dropdown base
 			$("<select />").appendTo(".navis");
 

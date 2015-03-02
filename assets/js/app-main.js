@@ -12,6 +12,9 @@ require.config({
 		'jq_ui' : {
 			deps : ['jquery'],
 		},
+		"navgoco" : {
+			deps : ['jquery'],
+		},
 		"noty" : {
 			deps : ['jquery'],
 		},
