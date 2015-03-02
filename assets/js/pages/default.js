@@ -1,4 +1,4 @@
-define(['jquery','bootstrap','flexslider','levelmenu','navgoco'], function($)
+define(['jquery','bootstrap','navgoco','flexslider','levelmenu'], function($)
 {
 	return new function(){
 		var self = this;
@@ -35,7 +35,7 @@ define(['jquery','bootstrap','flexslider','levelmenu','navgoco'], function($)
 			// Navigation Menu
 			ddlevelsmenu.setup("ddtopmenubar", "topbar");
 
-			// Dropdown Selec
+			// Dropdown Select
 			// Navigation (Select box)
 			// Create the dropdown base
 			$("<select />").appendTo(".navis");
