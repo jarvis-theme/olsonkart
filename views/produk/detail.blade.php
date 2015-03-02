@@ -174,46 +174,48 @@
 			</div>
 			<div class="sep-bor"></div>
 		 </div>
-	  </div>
+		</div>
 
-	  <!-- Recent posts CarouFredSel Starts -->
-	  <div class="recent-posts blocky">
-		 <div class="container">
-			<div class="row">
-			   <div class="col-md-12">
-				  <!-- Section title -->
-				  <div class="section-title">
-					 <h4><i class="icon-gift color"></i> &nbsp;Related Product</h4>
-				  </div>    
+		@if(count($produklain as $myproduk) > 0)
+		<!-- Recent posts CarouFredSel Starts -->
+		<div class="recent-posts blocky">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Section title -->
+						<div class="section-title">
+							<h4><i class="icon-gift color"></i> &nbsp;Related Product</h4>
+						</div>    
 				  
-					<div class="row">
-						<div class="col-md-12">
-							<div class="my_carousel">
-								<div class="carousel_nav pull-right">
-									<!-- Carousel navigation -->
-									<a class="prev" id="car_prev" href="#"><i class="icon-chevron-left"></i></a>
-									<a class="next" id="car_next" href="#"><i class="icon-chevron-right"></i></a>
-								</div>
-								<div class="clearfix"></div>
-									<ul id="carousel_container">
-										<!-- Carousel item -->
-										@foreach($produklain as $myproduk)
-										<li>
-								   			<a href="{{slugProduk($myproduk)}}">{{HTML::image(getPrefixDomain().'/produk/'.$myproduk->gambar1, $myproduk->nama, array('class' => 'img-responsive', 'style' => 'width:auto;'))}}</a>
-											<div class="carousel_caption">
-												<h5><a href="{{slugProduk($myproduk)}}">{{shortName($myproduk->nama, 20)}}</a></h5>
-												<p>{{--shortDescription($myproduk->deskripsi,100)--}}</p>
-												<a href="{{slugProduk($myproduk)}}" class="btn btn-info btn-sm"><i class="icon-shopping-cart"></i> Lihat Produk</a>
-											</div>
-										</li>
-										@endforeach
-									</ul>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="my_carousel">
+									<div class="carousel_nav pull-right">
+										<!-- Carousel navigation -->
+										<a class="prev" id="car_prev" href="#"><i class="icon-chevron-left"></i></a>
+										<a class="next" id="car_next" href="#"><i class="icon-chevron-right"></i></a>
+									</div>
 									<div class="clearfix"></div>
+										<ul id="carousel_container">
+											<!-- Carousel item -->
+											@foreach($produklain as $myproduk)
+											<li>
+												<a href="{{slugProduk($myproduk)}}">{{HTML::image(getPrefixDomain().'/produk/'.$myproduk->gambar1, $myproduk->nama, array('class' => 'img-responsive', 'style' => 'width:auto;'))}}</a>
+												<div class="carousel_caption">
+													<h5><a href="{{slugProduk($myproduk)}}">{{shortName($myproduk->nama, 20)}}</a></h5>
+													<p>{{--shortDescription($myproduk->deskripsi,100)--}}</p>
+													<a href="{{slugProduk($myproduk)}}" class="btn btn-info btn-sm"><i class="icon-shopping-cart"></i> Lihat Produk</a>
+												</div>
+											</li>
+											@endforeach
+										</ul>
+										<div class="clearfix"></div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- Recent posts Ends -->
+			<!-- Recent posts Ends -->
+		@endif
