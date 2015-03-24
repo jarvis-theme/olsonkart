@@ -29,11 +29,15 @@
 								<li>
 									@foreach($group->link as $key=>$link)
 										@if($link->halaman=='1')
+											@if($link->linkTo == 'halaman/about-us')
+											<a class="invarseColor" href={{"'".URL::to(strtolower($link->linkTo))."'"}}><i class="icon-caret-right"></i> {{$link->nama}}</a>
+											@else
 											<a class="invarseColor" href={{"'".URL::to("halaman/".strtolower($link->linkTo))."'"}}><i class="icon-caret-right"></i> {{$link->nama}}</a>
+											@endif
 										@elseif($link->halaman=='2')
 											<a class="invarseColor" href={{"'".URL::to("blog/".strtolower($link->linkTo))."'"}}><i class="icon-caret-right"></i> {{$link->nama}}</a>
 										@elseif($link->url=='1')
-											<a class="invarseColor" href="http://{{strtolower($link->linkTo)}}"><i class="icon-caret-right"></i> {{$link->nama}}</a>
+											<a class="invarseColor" href={{"'".URL::to(strtolower($link->linkTo))."'"}}><i class="icon-caret-right"></i> {{$link->nama}}</a>
 										@else
 											<a class="invarseColor" href={{"'".URL::to(strtolower($link->linkTo))."'"}}><i class="icon-caret-right"></i> {{$link->nama}}</a>
 										@endif
@@ -66,13 +70,27 @@
 			<hr/>
 			<div class="row">
 			@if(!empty($bank))	
-				@foreach($bank as $value)	
+				@foreach(list_banks() as $value)	
 					<div class="col-md-2 col-sm-4 col-xs-6">
 						<div class="client">
-							<img style="margin: 0 auto;" src="{{URL::to('img/'.$value->bankdefault->logo)}}" alt="{{$value->name}}" class="img-responsive" />
+							<img style="margin: 0 auto;" src="{{bank_logo($value)}}" alt="{{$value->name}}" class="img-responsive" />
 						</div>
 					</div>
 				@endforeach	
+				@if(list_payments()[2]->aktif == 1)	
+					<div class="col-md-2 col-sm-4 col-xs-6">
+						<div class="client">
+							<img style="margin: 0 auto;" src="{{URL::to('img/bank/ipaymu.jpg')}}" alt="support ipaymu" class="img-responsive" />
+						</div>
+					</div>
+				@endif	
+				@if(count(list_dokus()) > 0 && list_dokus()->status == 1)
+					<div class="col-md-2 col-sm-4 col-xs-6">
+						<div class="client">
+							<img style="margin: 0 auto;" src="{{URL::to('img/bank/doku.jpg')}}" alt="support doku myshortcart" class="img-responsive" />
+						</div>
+					</div>
+				@endif
 			@endif	
 			</div>
 			<hr />

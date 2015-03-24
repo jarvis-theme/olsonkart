@@ -10,7 +10,7 @@
        
        <div class="col-md-4 col-sm-5" style="float: right;">
           <div class="kart-links">
-            @if ( ! Sentry::check())
+            @if ( ! is_login() )
                 <a href="{{URL::to('member')}}">Login</a>
                 <a href="{{URL::to('member/create')}}">Register</a>
             @else
