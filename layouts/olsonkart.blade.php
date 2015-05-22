@@ -13,11 +13,11 @@
         {{ Theme::place('content') }}
         {{ Theme::partial('subscribe') }}
         {{ Theme::partial('footer') }}
-        <span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span> 
+        <span class="totop">
+            <a href="#"><i class="icon-chevron-up"></i></a>
+        </span> 
 
         {{ Theme::partial('defaultjs') }}
-	{{ Theme::asset()->scripts() }}
-        {{ Theme::asset()->container('footer')->scripts() }}
         {{ Theme::partial('analytic') }}
     </body>
 </html>

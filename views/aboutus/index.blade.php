@@ -1,7 +1,7 @@
 <!-- Page title -->
       <div class="page-title">
          <div class="container">
-            <h2><i class="icon-desktop color"></i> About Us <small>Subtext for header</small></h2>
+            <h2><i class="icon-desktop color"></i> About Us <small></small></h2>
             <hr />
          </div>
       </div>

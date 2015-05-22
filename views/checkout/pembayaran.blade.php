@@ -8,7 +8,7 @@
 					<br>
 					<header class="span12 prime">
 					<ul class="nav nav-pills" >
-					  <li><a href="{{URL::to('checkout')}}">Keranjang Belanja &rarr;</a></li>
+					  <li><a href="{{url('checkout')}}">Keranjang Belanja &rarr;</a></li>
 					  <li><a href="javascript:history.back()">Data Pengiriman &rarr;</a></li>
 					  <li class="active"><a href="#">Pembayaran &rarr;</a></li>
 					  <li><a href="#">Konfirmasi &rarr;</a></li>
@@ -24,7 +24,7 @@
 
 
 				<div class="row cart">
-					<form class="form-horizontal" action="{{URL::to('konfirmasi')}}" name='pembayaran' method='post'>
+					<form class="form-horizontal" action="{{url('konfirmasi')}}" name='pembayaran' method='post'>
 					<div class="span12">
 						Pilih Jenis Pembayaran: <hr>
 						<label class="radio">
@@ -44,11 +44,11 @@
 									<tr>
 										<td class="center">
 											@if($banktran->bankDefaultId=='1')
-												<img src="{{URL::to('img/bank/bri.png')}}" width="100">
+												<img src="{{url('img/bank/bri.png')}}" width="100">
 											@elseif($banktran->bankDefaultId=='2')
-												<img src="{{URL::to('img/bank/bca.png')}}" width="100">
+												<img src="{{url('img/bank/bca.png')}}" width="100">
 											@elseif($banktran->bankDefaultId=='3')
-												<img src="{{URL::to('img/bank/mandiri.png')}}" width="100">
+												<img src="{{url('img/bank/mandiri.png')}}" width="100">
 											@endif
 										</td>
 										<td class="center">{{$banktran->noRekening}}</td>

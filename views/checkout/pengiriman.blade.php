@@ -8,7 +8,7 @@
 					<br>
 					<header class="span12 prime">
 					<ul class="nav nav-pills">
-					  <li><a href="{{URL::to('checkout')}}">Keranjang Belanja &rarr;</a></li>
+					  <li><a href="{{url('checkout')}}">Keranjang Belanja &rarr;</a></li>
 					  <li class="active"><a href="#">Data Pengiriman &rarr;</a></li>
 					  <li><a href="#">Pembayaran &rarr;</a></li>
 					  <li><a href="#">Konfirmasi &rarr;</a></li>
@@ -27,7 +27,7 @@
 
 				<div class="row cart">
 					<div class="span12">
-						<form class="form-horizontal" action="{{URL::to('pembayaran')}}" name='pengiriman' method='post'>
+						<form class="form-horizontal" action="{{url('pembayaran')}}" name='pengiriman' method='post'>
 
 							<div class="control-group">
 							<label class="control-label" for="inputEmail" > Nama</label>

@@ -64,9 +64,9 @@ return array(
         'type'=> 'false', 
         'warnaDef'=>'button-home:#0fa6bc;main-color:#16cbe6;button-color: #5bc0de;border-color: #46b8da;hover-button-color: #39b3d7;hover-border-color: #269abc',
         'color'=>false
-        ),
+    ),
     'layout' => array(
         'index1'=>'Layout dengan sidebar'
-        ),
+    ),
 
 );

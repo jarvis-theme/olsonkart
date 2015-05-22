@@ -19,6 +19,7 @@ require.config({
 			deps : ['jquery'],
 		},
 	},
+    "waitSeconds" : 20,
 
 	paths: {
 		// LIBRARY
@@ -28,7 +29,7 @@ require.config({
 		flexslider		: dirTema+'assets/js/lib/jquery.flexslider',
 		fancybox		: dirTema+'assets/js/lib/jquery.fancybox',
 		jq_ui			: 'js/jquery-ui',
-		jquery 			: ['//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',dirTema+'assets/js/lib/jquery1.7.2.min'],
+		jquery 			: ['//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',dirTema+'assets/js/lib/jquery-1.7.2.min'],
 		navgoco			: dirTema+'assets/js/lib/jquery.navgoco.min',
 		noty			: 'js/jquery.noty',
 		levelmenu		: dirTema+'assets/js/lib/ddlevelsmenu',

@@ -42,11 +42,11 @@
 									<tr>
 										<td >
 											@if($banktran->bankDefaultId=='1')
-												<img src="{{URL::to('img/bank/bri.png')}}" style="width:75px; height 75px;">
+												<img src="{{url('img/bank/bri.png')}}" style="width:75px; height 75px;">
 											@elseif($banktran->bankDefaultId=='2')
-												<img src="{{URL::to('img/bank/bca.png')}}" width="80">
+												<img src="{{url('img/bank/bca.png')}}" width="80">
 											@elseif($banktran->bankDefaultId=='3')
-												<img src="{{URL::to('img/bank/mandiri.png')}}" width="80">
+												<img src="{{url('img/bank/mandiri.png')}}" width="80">
 											@endif
 										</td>
 										<td width='90%'><h4>{{ $banktran->bankdefault->nama}} : {{$banktran->noRekening}}</h4> A/n {{$banktran->atasNama}}</td>
@@ -55,7 +55,7 @@
 								</table>
 								<hr>
 								<p>Setelah melakukan pembayaran anda bisa mengkonfirmasi pembayaran anda disini:</p>
-								<a href="{{URL::to('konfirmasiorder/'.$order->id)}}" class="btn theme">Konfirmasi Pembayaran</a>
+								<a href="{{url('konfirmasiorder/'.$order->id)}}" class="btn theme">Konfirmasi Pembayaran</a>
 							</div>
 						</div>
 					@endif

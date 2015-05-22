@@ -1149,7 +1149,7 @@ strong{
    left:7px;
 }
 
-.shop-items .item-icon span{
+/*.shop-items .item-icon span{
    width:35px;
    height:20px;
    background:#16cbe6;
@@ -1160,7 +1160,7 @@ strong{
    font-weight:bold;
    line-height:18px;
    border-radius:5px;
-}
+}*/
 
 .shop-items .item-image{
 	max-height: 150px;
@@ -2189,4 +2189,17 @@ footer .copy{
 	color: #ffffff;
 	background-color: #39b3d7;
 	border-color: #269abc;
+}
+.breadcrumb span{
+   color: #16CBE6;
+}
+.fb_reset {display: inline-block;}
+.fb-share-button {top: -8px; margin: 0 15px;}
+.special {text-align: center;}
+.img-product{margin: 0px;}
+.sosial{margin:15px 0px 40px 0;}
+
+@media (min-width: 481px) and (max-width: 639px){
+   .slides{width: 25%;}
+   .img-product{margin: auto;}
 }

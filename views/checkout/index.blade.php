@@ -62,14 +62,14 @@
 														@endif
 													</div>
 												</td>
-												<td><i>{{jadiRupiah($item['price'])}}</i></td>
+												<td><i>{{price($item['price'])}}</i></td>
 												<td><input type="text" class="span1 cartqty" value="{{$item['qty']}}" name='{{ $item['rowid'] }}'/></td>
-												<td><span class="{{ $item['rowid'] }}"><strong>{{ jadiRupiah($item['price'] * $item['qty'])}}</strong></span></td>
+												<td><span class="{{ $item['rowid'] }}"><strong>{{ price($item['price'] * $item['qty'])}}</strong></span></td>
 											</tr>
 											@endforeach										
 										<tr>
 											<td colspan="3"><div class="item">Sub-Total</div></td>
-											<td><span id='subtotalcart'>{{jadiRupiah(Shpcart::cart()->total())}}</span></td>
+											<td><span id='subtotalcart'>{{price(Shpcart::cart()->total())}}</span></td>
 										</tr>
 										<tr>
 											<td colspan="3">
@@ -103,7 +103,7 @@
 												</div>
 
 											</td>
-											<td><span id='kupontext'>{{jadiRupiah(0)}}</span></td>
+											<td><span id='kupontext'>{{price(0)}}</span></td>
 										</tr>
 										<tr>
 											<td colspan="3">
@@ -119,12 +119,12 @@
 													Kode Unik:<br><br>
 												</div>												
 											</td>
-											<td><span id='kodeuniktext'>{{jadiRupiah($kodeunik)}}</span></td>
+											<td><span id='kodeuniktext'>{{price($kodeunik)}}</span></td>
 										</tr>
 										<tr>
 											<td colspan="3"><div class="item">Total</div></td>
 											<td><strong><span id='totalcart'>
-												{{jadiRupiah(Shpcart::cart()->total())}}</span></strong></td>
+												{{price(Shpcart::cart()->total())}}</span></strong></td>
 										</tr>
 									</tbody>
 								</table>
