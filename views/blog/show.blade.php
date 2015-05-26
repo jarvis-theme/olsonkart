@@ -69,6 +69,7 @@
 								@endforeach
 								</ul>
 							</div>
+							@if(count(vertical_banner()) > 0)
 							<div class="widget" style="text-align: center;">
 								<h4 style="margin-left: 0">Banner</h4>
 								@foreach(vertical_banner() as $item)
@@ -78,7 +79,8 @@
 									</a>
 								</div>
 								@endforeach
-							</div>                              
+							</div>
+							@endif
 						</div>                                                
 					</div>
 				</div>

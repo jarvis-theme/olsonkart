@@ -69,7 +69,7 @@
 								@foreach(new_product() as $key=>$myproduk)
 								<li style="min-height:320px;">
 									<a href="{{product_url($myproduk)}}">
-										<img style="width: auto" src="{{product_image_url($myproduk->gambar1)}}" alt="" class="img-responsive"/>
+										<img style="width: auto" src="{{url(product_image_url($myproduk->gambar1))}}" alt="" class="img-responsive"/>
 									</a>
 									<div class="carousel_caption">
 										<h5><a href="{{product_url($myproduk)}}">{{$myproduk->nama}}</a></h5>

@@ -71,6 +71,7 @@
 						@endforeach
 						</ul>
 					 </div>
+					 @if(count(vertical_banner()) > 0)
 					 <div class="widget" style="text-align: center;">
 						<h4>Banner</h4>
 						@foreach(vertical_banner() as $item)
@@ -78,7 +79,8 @@
 						   <a href="{{url($item->url)}}"><img src="{{url(banner_image_url($item->gambar))}}" /></a>
 						</div>
 						@endforeach
-					 </div>                              
+					 </div>
+					 @endif
 				  </div>                                                
 			   </div>
 			</div>

@@ -18,8 +18,6 @@
 							<!-- {{breadcrumbProduk(null,' <li>;</li> ',';', true, $kategoridetail)}} -->
 						<li>
         					<a href="{{url('home')}}">Home</a></li> {{breadcrumbProduk($produk,' <span>/</span>; ',';',true, $kategoridetail,@$category,@$collection)}}
-
-                            <!-- {{breadcrumbProduk(null,' <li>;</li> ',';', true, $kategoridetail,@$category,@$collection)}} -->
 						@else
 							<li><a href="{{url('home')}}">Home</a></li>
 							<a class="active">/ Produk</a>
@@ -45,7 +43,7 @@
 								<!-- Item image -->
 								<div class="item-image">
 									<a href="{{product_url($myproduk)}}">
-										{{HTML::image(product_image_url($myproduk->gambar1), 'produk', array('class="img-responsive" style="width:auto"'))}}
+										{{HTML::image(product_image_url($myproduk->gambar1), 'produk', array('class'=>"img-responsive", "style"=>"width:auto"))}}
 									</a>
 								</div>
 								<!-- Item details -->
@@ -155,7 +153,7 @@
 					</div>
 					<br>
 				</div>
-			</div>	
+			</div>
 			<div class="sep-bor"></div>
 		</div>
 	</div>

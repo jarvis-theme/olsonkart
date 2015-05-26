@@ -106,8 +106,6 @@
 					<div id="myTabContent" class="tab-content">
 						<!-- Description -->
 						<div class="tab-pane fade in active" id="tab1">
-							{{--*/ $var = 'test' /*--}}
-							{{--$var--}}
 							<h5><strong>{{$produk->nama}}</strong></h5>
 							{{$produk->deskripsi}}
 						</div>
@@ -161,13 +159,13 @@
 						</ul>
 					</div>
 					<div class="special" style="text-align: center;">
-					@foreach(vertical_banner() as $item)
+						@foreach(vertical_banner() as $item)
 						<div>
 							<a href="{{url($item->url)}}">
 								<img width="213" src="{{url(banner_image_url($item->gambar))}}" />
 							</a>
 						</div>
-					@endforeach
+						@endforeach
 					</div>
 				</div>
 			</div>
@@ -199,7 +197,7 @@
 										<!-- Carousel item -->
 										@foreach(other_product($produk) as $myproduk)
 										<li>
-											<a href="{{product_url($myproduk)}}">{{HTML::image(product_image_url($myproduk->gambar1), $myproduk->nama, array('class' => 'img-responsive', 'style' => 'width:auto;'))}}</a>
+											<a href="{{product_url($myproduk)}}">{{HTML::image(product_image_url($myproduk->gambar1), $myproduk->nama, array('class' => 'img-responsive', 'style' => 'width:auto'))}}</a>
 											<div class="carousel_caption">
 												<h5><a href="{{product_url($myproduk)}}">{{shortName($myproduk->nama, 20)}}</a></h5>
 												<p>{{--shortDescription($myproduk->deskripsi,100)--}}</p>

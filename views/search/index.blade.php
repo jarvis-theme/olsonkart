@@ -120,16 +120,15 @@
 					</ul>
 				</div>
 
-				<div class="special">
 				@foreach(vertical_banner() as $item)
-					<div>
-						<a href="{{url($item->url)}}">
-							<img width="213" src="{{banner_image_url($item->gambar)}}" />
-						</a>
-					</div>
-				@endforeach
+				<div class="special">
+					<a href="{{url($item->url)}}">
+						<img width="213" src="{{banner_image_url($item->gambar)}}" />
+					</a>
 				</div>
 				<br>
+				@endforeach
+				@if($jumlahCari!=0)
 				<div class="form">
 					<h5>Search</h5>
 					<form action="{{url('search')}}" method="post" class="form-inline" role="form">
@@ -140,6 +139,7 @@
 					</form>
 				</div>
 				<br>
+				@endif
 			</div>
 		</div>
 		

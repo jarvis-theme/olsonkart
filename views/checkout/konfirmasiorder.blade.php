@@ -45,10 +45,10 @@
 				  <ul>
 					@if ($checkouttype==1)
 					  @foreach ($order->detailorder as $detail)
-						<li li style="margin-left: 8px">{{$detail->produk->nama}} {{$detail->opsiSkuId !=0 ? '('.$detail->opsisku->opsi1.($detail->opsisku->opsi2 != '' ? ' / '.$detail->opsisku->opsi2:'').($detail->opsisku->opsi3 !='' ? ' / '.$detail->opsisku->opsi3:'').')':''}} - {{$detail->qty}}</li>
+						<li li style="margin-left: 8px">{{$detail->produk->nama}} {{$detail->opsiSkuId !=0 ? '('.$detail->opsisku['opsi1'].($detail->opsisku['opsi2'] != '' ? ' / '.$detail->opsisku['opsi2']:'').($detail->opsisku['opsi3'] !='' ? ' / '.$detail->opsisku['opsi3']:'').')':''}} - {{$detail->qty}}</li>
 					  @endforeach
 					@else
-					  <li li style="margin-left: 8px">{{$order->preorderdata->produk->nama}} ({{$order->opsiSkuId==0 ? 'No Opsi' : $order->opsisku->opsi1.($order->opsisku->opsi2!='' ? ' / '.$order->opsisku->opsi2:'').($order->opsisku->opsi3!='' ? ' / '.$order->opsisku->opsi3:'')}})
+					  <li li style="margin-left: 8px">{{$order->preorderdata->produk->nama}} ({{$order->opsiSkuId==0 ? 'No Opsi' : $order->opsisku['opsi1'].($order->opsisku['opsi2']!='' ? ' / '.$order->opsisku['opsi2']:'').($order->opsisku['opsi3']!='' ? ' / '.$order->opsisku['opsi3']:'')}})
 					   - {{$order->jumlah}}</li>
 					@endif
 				  </ul>
@@ -123,48 +123,50 @@
 			 </ul>
 		  </div>
 	   </div>
-
-	  <div class="col-md-9">
-		@if($order->jenisPembayaran==1)
-		  @if($checkouttype==1)                         
-			{{Form::open(array('url'=> 'konfirmasiorder/'.$order->id, 'method'=>'put', 'class'=> 'form-horizontal container'))}}                            
-		  @else                         
-			{{Form::open(array('url'=> 'konfirmasipreorder/'.$order->id, 'method'=>'put', 'class'=> 'form-horizontal container'))}}                           
-		  @endif
-			<div class="form-group">
-			  <label  class="control-label"> Nama Pengirim:</label>
-			  <input type="text" class="form-control" id="search" placeholder="Nama Pengirim" name='nama' required>
-			</div>
-			<div class="form-group">
-			  <label  class="control-label"> No Rekening:</label>
-			  <input type="text" class="form-control" id="search" placeholder="No Rekening" name='noRekPengirim' required>
-			</div>
-			<div class="form-group">
-			  <label  class="control-label"> Rekening Tujuan:</label>
-			  <select name='bank' class="form-control">
-				  <option value=''>-- Pilih Bank Tujuan --</option>
-				  @foreach ($banktrans as $bank)
-				  <option value="{{$bank->id}}">{{$bank->bankdefault->nama}} - {{$bank->noRekening}} - A/n {{$bank->atasNama}}</option>
-				  @endforeach
-			  </select>
-			</div>
-			<div class="form-group">
-			  <label  class="control-label"> Jumlah:</label>
-			  @if($checkouttype==1)        
-				<input type="text" class="form-control" id="search" placeholder="jumlah yg terbayar" name='jumlah' value='{{$order->total}}' required>
-			  @else
-				@if($order->status < 2)
-				  <input class="form-control" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->dp}}' required>
-				@elseif(($order->status > 1 && $order->status < 4) || $order->status==7)
-				  <input class="form-control" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->total - $order->dp}}' required>
+		
+		<div class="container">
+			<div class="col-md-9">
+				@if($order->jenisPembayaran==1)
+				  @if($checkouttype==1)                         
+					{{Form::open(array('url'=> 'konfirmasiorder/'.$order->id, 'method'=>'put', 'class'=> 'form-horizontal'))}}                            
+				  @else                         
+					{{Form::open(array('url'=> 'konfirmasipreorder/'.$order->id, 'method'=>'put', 'class'=> 'form-horizontal'))}}                           
+				  @endif
+					<div class="form-group">
+					  <label  class="control-label"> Nama Pengirim:</label>
+					  <input type="text" class="form-control" id="search" placeholder="Nama Pengirim" name='nama' required>
+					</div>
+					<div class="form-group">
+					  <label  class="control-label"> No Rekening:</label>
+					  <input type="text" class="form-control" id="search" placeholder="No Rekening" name='noRekPengirim' required>
+					</div>
+					<div class="form-group">
+					  <label  class="control-label"> Rekening Tujuan:</label>
+					  <select name='bank' class="form-control">
+						  <option value=''>-- Pilih Bank Tujuan --</option>
+						  @foreach ($banktrans as $bank)
+						  <option value="{{$bank->id}}">{{$bank->bankdefault->nama}} - {{$bank->noRekening}} - A/n {{$bank->atasNama}}</option>
+						  @endforeach
+					  </select>
+					</div>
+					<div class="form-group">
+					  <label  class="control-label"> Jumlah:</label>
+					  @if($checkouttype==1)        
+						<input type="text" class="form-control" id="search" placeholder="jumlah yg terbayar" name='jumlah' value='{{$order->total}}' required>
+					  @else
+						@if($order->status < 2)
+						  <input class="form-control" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->dp}}' required>
+						@elseif(($order->status > 1 && $order->status < 4) || $order->status==7)
+						  <input class="form-control" id="search" placeholder="jumlah yg terbayar" type="text" name='jumlah' value='{{$order->total - $order->dp}}' required>
+						@endif
+					  @endif
+					  
+					</div>
+					<button type="submit" class="form-group btn btn-info">Konfirmasi Order</button>
+				  {{Form::close()}}
 				@endif
-			  @endif
-			  
 			</div>
-			<button type="submit" class="form-group btn btn-info">Konfirmasi Order</button>
-		  {{Form::close()}}
-		@endif
-	  </div>
+		</div>
 	</div>
 	  <div class="sep-bor"></div>
 	  @if($paymentinfo!=null)

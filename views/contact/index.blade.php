@@ -65,7 +65,6 @@
 							<h6>{{ Theme::place('title') }}.</h6>
 							<!-- Address -->
 							{{$kontak->alamat}}<br>
-							<!-- San Francisco, CA 94107<br> -->
 							<!-- Phone number -->
 							<abbr title="Phone">P:</abbr> {{$kontak->telepon}}.
 						</address>

@@ -181,9 +181,9 @@
 					@endif
 					</table>
 				@endif 
-                    {{list_order()->links()}} 
 			   </div>
 			</div>
+            {{list_order()->links()}} 
 			
 			<div class="sep-bor"></div>
 		</div>

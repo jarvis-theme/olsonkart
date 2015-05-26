@@ -18,7 +18,8 @@
 <div class="blocky">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2">
+			@if(count(vertical_banner()) > 0)
+			<div class="col-sm-4">
 				<div class="reg-login-info">
 					<h2>Banner</h2>
 					@foreach(vertical_banner() as $item)
@@ -30,7 +31,10 @@
 					@endforeach
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-sm-6 col-sm-offset-2">
+			@else
+			<div class="col-sm-12 col-xs-12">
+			@endif
 				<div class="register-login">
 					<div class="cool-block">
 						<div class="cool-block-bor">

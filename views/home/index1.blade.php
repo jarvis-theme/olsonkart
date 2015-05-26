@@ -36,7 +36,9 @@
 							@endif
 							<!-- Item image -->
 							<div class="item-image">
-								<a href="{{product_url($myproduk)}}">{{HTML::image(url(product_image_url($myproduk->gambar1)), $myproduk->nama, array('class="img-responsive" style="width:auto"'))}}</a>
+								<a href="{{product_url($myproduk)}}">
+									{{HTML::image(url(product_image_url($myproduk->gambar1)), $myproduk->nama, array('class'=>"img-responsive", "style"=>"width:auto"))}}
+								</a>
 							</div>
 							<!-- Item details -->
 							<div class="item-details">
