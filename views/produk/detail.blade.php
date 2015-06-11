@@ -21,24 +21,24 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
 								<div class="item-image" id="flexslider-product">
-									<img src="{{url(product_image_url($produk->gambar1))}}" class="img-responsive img-product" alt="{{$produk->nama}}">
+									<img src="{{url(product_image_url($produk->gambar1, 'medium'))}}" class="img-responsive img-product" alt="{{$produk->nama}}">
 									@if($produk->gambar1!='')
 										<div class="col-md-3 col-sm-4 col-xs-4 slides">
-											<a href="{{product_image_url($produk->gambar1)}}">
+											<a href="{{product_image_url($produk->gambar1, 'large')}}">
 												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar1)}}"  alt="{{$produk->nama}}">
 											</a>
 										</div>
 									@endif
 									@if($produk->gambar2!='')
 										<div class="col-md-3 col-sm-4 col-xs-4 slides">
-											<a href="{{product_image_url($produk->gambar2)}}">
+											<a href="{{product_image_url($produk->gambar2, 'large')}}">
 												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar2)}}" alt="{{$produk->nama}}">
 											</a>
 										</div>
 									@endif
 									@if($produk->gambar3!='')
 										<div class="col-md-3 col-sm-4 col-xs-4 slides">
-											<a href="{{product_image_url($produk->gambar3)}}">
+											<a href="{{product_image_url($produk->gambar3, 'large')}}">
 												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar3)}}" alt="{{$produk->nama}}">
 											</a>
 										</div>
@@ -197,7 +197,7 @@
 										<!-- Carousel item -->
 										@foreach(other_product($produk) as $myproduk)
 										<li>
-											<a href="{{product_url($myproduk)}}">{{HTML::image(product_image_url($myproduk->gambar1), $myproduk->nama, array('class' => 'img-responsive', 'style' => 'width:auto'))}}</a>
+											<a href="{{product_url($myproduk)}}">{{HTML::image(product_image_url($myproduk->gambar1, 'medium'), $myproduk->nama, array('class' => 'img-responsive', 'style' => 'width:auto'))}}</a>
 											<div class="carousel_caption">
 												<h5><a href="{{product_url($myproduk)}}">{{shortName($myproduk->nama, 20)}}</a></h5>
 												<p>{{--shortDescription($myproduk->deskripsi,100)--}}</p>

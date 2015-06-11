@@ -19,7 +19,7 @@
 					<!-- Item image -->
 					<div class="item-image">
 						<a href="{{product_url($myproduk)}}">
-							<img src="{{product_image_url($myproduk->gambar1)}}" alt="{{$myproduk->nama}}" class="img-responsive"/>
+							<img src="{{product_image_url($myproduk->gambar1, 'medium')}}" alt="{{$myproduk->nama}}" class="img-responsive"/>
 						</a>
 					</div>
 					<!-- Item details -->
@@ -69,7 +69,7 @@
 								@foreach(new_product() as $key=>$myproduk)
 								<li style="min-height:320px;">
 									<a href="{{product_url($myproduk)}}">
-										<img style="width: auto" src="{{url(product_image_url($myproduk->gambar1))}}" alt="" class="img-responsive"/>
+										<img style="width: auto" src="{{url(product_image_url($myproduk->gambar1, 'medium'))}}" alt="" class="img-responsive"/>
 									</a>
 									<div class="carousel_caption">
 										<h5><a href="{{product_url($myproduk)}}">{{$myproduk->nama}}</a></h5>

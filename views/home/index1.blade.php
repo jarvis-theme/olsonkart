@@ -37,7 +37,7 @@
 							<!-- Item image -->
 							<div class="item-image">
 								<a href="{{product_url($myproduk)}}">
-									{{HTML::image(url(product_image_url($myproduk->gambar1)), $myproduk->nama, array('class'=>"img-responsive", "style"=>"width:auto"))}}
+									{{HTML::image(url(product_image_url($myproduk->gambar1, 'medium')), $myproduk->nama, array('class'=>"img-responsive", "style"=>"width:auto"))}}
 								</a>
 							</div>
 							<!-- Item details -->
