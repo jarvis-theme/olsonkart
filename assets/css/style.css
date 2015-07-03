@@ -1840,7 +1840,7 @@ strong{
 
 .totop {
 	position: fixed;
-	bottom: 0px;
+	bottom: 50px;
 	right: 0px;
 	z-index: 104400;
 	background: #16cbe6; 
@@ -2203,3 +2203,5 @@ footer .copy{
    .slides{width: 25%;}
    .img-product{margin: auto;}
 }
+.client { text-align: center; }
+.logo-bank {margin: 0 5px; padding-top: 5px; display: inline-block;}

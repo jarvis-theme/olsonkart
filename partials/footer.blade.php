@@ -26,22 +26,7 @@
                     		<ul>
 	                       		<li>
 	                            @foreach($group->link as $key=>$link)
-	                                @if($link->halaman=='1')
-	                                	@if($link->linkTo == 'halaman/about-us')
-                                    	<a class="invarseColor" href='{{url(strtolower($link->linkTo))}}'><i class="icon-caret-right"></i> {{$link->nama}}</a>
-                                        @else
-                                    	<a class="invarseColor" href='{{url("halaman/".strtolower($link->linkTo))}}'><i class="icon-caret-right"></i> {{$link->nama}}</a>
-                                        @endif
-	                                
-	                                @elseif($link->halaman=='2')
-                                    <a class="invarseColor" href='{{url("blog/".strtolower($link->linkTo))}}'><i class="icon-caret-right"></i> {{$link->nama}}</a>
-	                                
-	                                @elseif($link->url=='1')
-                                    <a class="invarseColor" href="{{strtolower($link->linkTo)}}"><i class="icon-caret-right"></i> {{$link->nama}}</a>
-	                                
-	                                @else
-                                    <a class="invarseColor" href='{{url(strtolower($link->linkTo))}}'><i class="icon-caret-right"></i> {{$link->nama}}</a>
-	                                @endif
+                                    <a class="invarseColor" href='{{menu_url($link)}}'><i class="icon-caret-right"></i> {{$link->nama}}</a>
 	                                <br>
 	                            @endforeach
 	                    		</li>
@@ -65,33 +50,25 @@
 			</div>
 			<hr/>
 			<div class="row">
-			@if(!empty($bank))	
-				@foreach(list_banks() as $value)	
-				<div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="client">
-						<img style="margin: 0 auto; padding-top: 5px;" src="{{bank_logo($value)}}" alt="{{$value->name}}" class="img-responsive" />
-					</div>
-				</div>
-				@endforeach	
-				@if(count(list_payments()) > 0)
-					@foreach(list_payments() as $pay)
-						@if($pay->nama == 'ipaymu' && $pay->aktif == 1)
-						<!-- <div class="col-md-2 col-sm-4 col-xs-6">
-							<div class="client">
-								<img style="margin: 0 auto; padding-top: 5px;" src="{{url('img/bank/ipaymu.jpg')}}" alt="support ipaymu" class="img-responsive" />
-							</div>
-						</div> -->
+						@if(!empty($bank))	
+							@foreach(list_banks() as $value)	
+							<img src="{{bank_logo($value)}}" alt="{{$value->name}}" class="img-responsive logo-bank" />
+							@endforeach	
+						@endif	
+						@if(count(list_payments()) > 0)
+							@foreach(list_payments() as $pay)
+								@if($pay->nama == 'ipaymu' && $pay->aktif == 1)
+								<img src="{{url('img/bank/ipaymu.jpg')}}" alt="support ipaymu" class="img-responsive logo-bank" />
+								@endif
+							@endforeach
 						@endif
-					@endforeach
-				@endif
-				@if(count(list_dokus()) > 0 && list_dokus()->status == 1)
-				<div class="col-md-2 col-sm-4 col-xs-6">
-					<div class="client">
-						<img style="margin: 0 auto; padding-top: 5px;" src="{{url('img/bank/doku.jpg')}}" alt="support doku myshortcart" class="img-responsive" />
+						@if(count(list_dokus()) > 0 && list_dokus()->status == 1)
+						<img src="{{url('img/bank/doku.jpg')}}" alt="support doku myshortcart" class="img-responsive logo-bank" />
+						@endif
 					</div>
 				</div>
-				@endif
-			@endif	
 			</div>
 			<hr />
 			<div class="copy text-center">

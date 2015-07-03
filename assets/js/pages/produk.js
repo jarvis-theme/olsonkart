@@ -17,6 +17,14 @@ define(['jquery','jq_ui','bootstrap','caroufredsel','fancybox'], function($){
 			   interval: 8000,
 			   pause: "hover"
 			});
+
+			$('.fancybox').fancybox({
+				padding: 10,
+				openEffect : 'elastic',
+				openSpeed  : 150,
+				closeEffect : 'elastic',
+				closeSpeed  : 150
+			});
 		};
 
 		var addToCartButton = function(){

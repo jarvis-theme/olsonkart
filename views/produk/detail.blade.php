@@ -21,25 +21,27 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
 								<div class="item-image" id="flexslider-product">
-									<img src="{{url(product_image_url($produk->gambar1, 'medium'))}}" class="img-responsive img-product" alt="{{$produk->nama}}">
-									@if($produk->gambar1!='')
-										<div class="col-md-3 col-sm-4 col-xs-4 slides">
-											<a href="{{product_image_url($produk->gambar1, 'large')}}">
-												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar1)}}"  alt="{{$produk->nama}}">
-											</a>
-										</div>
-									@endif
+									<a class="fancybox" href="{{product_image_url($produk->gambar1, 'large')}}" title="{{$produk->nama}}">
+										<img src="{{url(product_image_url($produk->gambar1, 'medium'))}}" class="img-responsive img-product" alt="{{$produk->nama}}">
+									</a>
 									@if($produk->gambar2!='')
 										<div class="col-md-3 col-sm-4 col-xs-4 slides">
-											<a href="{{product_image_url($produk->gambar2, 'large')}}">
+											<a class="fancybox" href="{{product_image_url($produk->gambar2, 'large')}}" title="{{$produk->nama}}">
 												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar2)}}" alt="{{$produk->nama}}">
 											</a>
 										</div>
 									@endif
 									@if($produk->gambar3!='')
 										<div class="col-md-3 col-sm-4 col-xs-4 slides">
-											<a href="{{product_image_url($produk->gambar3, 'large')}}">
+											<a class="fancybox" href="{{product_image_url($produk->gambar3, 'large')}}" title="{{$produk->nama}}">
 												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar3)}}" alt="{{$produk->nama}}">
+											</a>
+										</div>
+									@endif
+									@if($produk->gambar4!='')
+										<div class="col-md-3 col-sm-4 col-xs-4 slides">
+											<a class="fancybox" href="{{product_image_url($produk->gambar4, 'large')}}" title="{{$produk->nama}}">
+												<img class="img-responsive" style="float: left; width:75px !important;list-style-type: none;" src="{{product_image_url($produk->gambar4)}}" alt="{{$produk->nama}}">
 											</a>
 										</div>
 									@endif

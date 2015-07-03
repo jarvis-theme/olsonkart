@@ -17,15 +17,14 @@
 @endif
 
 <!-- ===========================================================================  -->
-
 <div class="blocky">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="reg-login-info">
-					<h2>Login to Access Amazing Benefits <span class="color">!!!</span></h2>
-					<h3>Have an Account</h3>
-					<p>By login you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p><br>
+					<h2>Login & nikmati kemudahan berbelanja <span class="color">!!!</span></h2>
+					<h3>Sudah Punya Akun</h3>
+					<p>Silahkan login ke akun anda untuk dapat berbelanja dengan mudah, cepat dan dapat memantau status pesanan anda.</p><br>
 					<a href="{{url('member/')}}" class="btn btn-danger">Login</a>
 				</div>
 			</div>
@@ -106,7 +105,7 @@
 									<div class="col-lg-offset-2 col-lg-10">
 										<div class="checkbox">
 											<label>
-												<input name='readme' value="1" type="checkbox"> Saya telah membaca dan menyetujui <a href="{{url('service')}}" target="_blank" >Privacy Policy</a>
+												<input name='readme' value="1" type="checkbox"> Saya telah membaca dan menyetujui <a href="{{url('service')}}" target="_blank" >Syarat & Ketentuan</a>
 											</label>
 										</div>
 									</div>

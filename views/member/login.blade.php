@@ -39,9 +39,10 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="reg-login-info">
-					<h2>Login to Access Amazing Benefits <span class="color">!!!</span></h2>
-					<h3>New Customer</h3>
-					<p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p><br><a href="{{url('member/create')}}" class="btn btn-danger">Create Account</a>
+					<h2>Login & nikmati kemudahan berbelanja <span class="color">!!!</span></h2>
+					<h3>Pelanggan Baru</h3>
+					<p>Dengan membuat akun di toko kami anda dapat berbelanja dengan mudah, cepat dan dapat melihat status pesanan anda.</p><br>
+					<a href="{{url('member/create')}}" class="btn btn-danger">Daftar</a>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -60,7 +61,7 @@
 									<label for="inputPassword1" class="col-lg-2 control-label">Password</label>
 									<div class="col-lg-10">
 										<input type="password" class="form-control" id="inputPassword1" name="password" placeholder="Password">
-										<a href="{{url('member/forget-password')}}" style="font-size: smaller;float: right;">Have you forget your password?</a>
+										<a href="{{url('member/forget-password')}}" style="font-size: smaller;float: right;">Lupa password?</a>
 									</div>
 								</div>
 								<!-- <div class="form-group">
@@ -74,7 +75,7 @@
 								</div> -->
 								<div class="form-group">
 									<div class="col-lg-offset-2 col-lg-10">
-										<button type="submit" class="btn btn-info">Sign in</button>
+										<button type="submit" class="btn btn-info">Login</button>
 										<button type="reset" class="btn btn-default">Reset</button>
 									</div>
 								</div>
