@@ -1,4 +1,4 @@
-﻿<!-- Clients starts -->
+<!-- Clients starts -->
 <div class="clients blocky">
 	<div class="container">
     	<div class="row"></div>
@@ -17,7 +17,7 @@
                     </div>
                 </div> -->
 
-                @foreach($tautan as $key=>$group)
+                @foreach(all_menu() as $key=>$group)
                     @if($key!=2)
                 	<div class="col-md-4 col-sm-4">
                     	<div class="fwidget">

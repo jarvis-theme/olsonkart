@@ -1,4 +1,4 @@
-﻿<!-- Catchy starts -->
+<!-- Catchy starts -->
       <div class="catchy blocky">
          <div class="catchy-inner1">
             <div class="catchy-inner2">
@@ -23,7 +23,7 @@
                            <div class="report-bor">
                               <div class="row" style="margin: 0 20px;">
                                  <!-- Report data starts -->
-                                 <span>{{shortDescription($aboutUs[1]->isi,200)}}<a href="{{URL::to('halaman/about-us')}}"></a></span>
+                                 <span>{{short_description(about_us()->isi,200)}}<a href="{{URL::to('halaman/about-us')}}"></a></span>
 
                               </div>
                               
