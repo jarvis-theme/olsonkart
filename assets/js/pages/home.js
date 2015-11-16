@@ -1,4 +1,4 @@
-define(['jquery','bootstrap','caroufredsel','levelmenu'], function(){
+define(['jquery','bootstrap','caroufredsel','flexslider','levelmenu'], function($,carousel,carouFredSel,flexslider){
 	return new function(){
 		var self = this;
 		self.run = function(){

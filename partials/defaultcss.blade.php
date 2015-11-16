@@ -1,25 +1,14 @@
-<!-- Default css-->
+{{favicon()}}   
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600italic,600' rel='stylesheet' type='text/css'>
 
-<!-- Styles -->
-{{generate_theme_css('olsonkart/assets/css/flexslider.css')}}
-<!-- Bootstrap CSS -->
-{{generate_theme_css('olsonkart/assets/css/bootstrap.min.css')}}
-<!-- Animate css -->
-{{generate_theme_css('olsonkart/assets/css/animate.min.css')}}
-<!-- Dropdown menu -->
-{{generate_theme_css('olsonkart/assets/css/ddlevelsmenu-base.css')}}
-{{generate_theme_css('olsonkart/assets/css/ddlevelsmenu-topbar.css')}}
-<!-- Countdown -->
-{{generate_theme_css('olsonkart/assets/css/jquery.countdown.css')}}
-<!-- Font awesome CSS -->
-{{generate_theme_css('olsonkart/assets/css/font-awesome.min.css')}}
-<!-- Custom CSS -->
+{{generate_theme_css('olsonkart/assets/css/flexslider.css')}}   
+{{generate_theme_css('olsonkart/assets/css/animate.min.css')}}  
+{{generate_theme_css('olsonkart/assets/css/bootstrap.min.css')}}    
 @if($tema->isiCss=='')
-	{{generate_theme_css('olsonkart/assets/css/style.css')}}
+{{generate_theme_css('olsonkart/assets/css/style.css')}}    
 @else
-	{{generate_theme_css('olsonkart/assets/css/editstyle.css')}}
+{{generate_theme_css('olsonkart/assets/css/editstyle.css')}}    
 @endif
 
-{{favicon()}}
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">

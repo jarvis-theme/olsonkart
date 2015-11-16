@@ -2,11 +2,10 @@
 <html lang="en">
     <head>
         {{ Theme::partial('seostuff') }}
-        {{ Theme::partial('defaultcss') }}
         {{ Theme::asset()->styles() }}
+        {{ Theme::partial('defaultcss') }}
     </head>
     <body>
-        
         {{ Theme::partial('header') }}
         <div class="clearfix"></div>
         {{ Theme::partial('slider') }}

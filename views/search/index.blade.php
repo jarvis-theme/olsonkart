@@ -1,50 +1,36 @@
-<!-- Page title -->
 <div class="page-title">
 	<div class="container">
 		<h2><i class="icon-list-alt color"></i> Search</h2>
 		<hr />
 	</div>
 </div>
-<!-- Page title -->
 
-<!-- Page content -->			
 <div class="shop-items">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-md-push-3">						 
-			<!-- Items List starts -->
 			@if($jumlahCari!=0)
 				<div class="row">
-					<!-- Item #1 -->
 					@foreach($hasilpro as $myproduk)
 					<div class="col-md-4 col-sm-4 col-xs-6">
 						<div class="item">
-							<!-- Use the below link to put HOT icon -->
 							@if(is_outstok($myproduk))
-								<div class="item-icon"><span class="label label-default">KOSONG</span></div>
-							@else
-								@if(is_terlaris($myproduk))
-									<div class="item-icon"><span class="label label-danger">HOT</span></div>
-								@endif
-								@if(is_produkbaru($myproduk))
-									<div class="item-icon"><span class="label label-info">BARU</span></div>
-								@endif
+							<div class="item-icon"><span class="label label-default">KOSONG</span></div>
+							@elseif(is_terlaris($myproduk))
+							<div class="item-icon"><span class="label label-danger">HOT</span></div>
+							@elseif(is_produkbaru($myproduk))
+							<div class="item-icon"><span class="label label-info">BARU</span></div>
 							@endif
-							<!-- Item image -->
+
 							<div class="item-image">
-								<a href="{{product_url($myproduk)}}">{{HTML::image(product_image_url($myproduk->gambar1), $myproduk->nama, array('class="img-responsive" style="width:auto"'))}}</a>
+								<a href="{{product_url($myproduk)}}">{{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama, array('class'=>"img-responsive", "id"=>"img-home1", "title"=>$myproduk->nama))}}</a>
 							</div>
-							<!-- Item details -->
 							<div class="item-details">
-								<!-- Name -->
 								<h5><a href="{{product_url($myproduk)}}">{{shortName($myproduk->nama,20)}}</a></h5>
 								<div class="clearfix"></div>
-								<!-- Para. Note more than 2 lines. -->
-								<p style="min-height:80px;">{{shortDescription($myproduk->deskripsi,100)}}...</p>
+								<p id="desc-product">{{shortDescription($myproduk->deskripsi,100)}}</p>
 								<hr />
-								<!-- Price -->
-								<div class="item-price pull-left" style="width:auto;padding: 0 3px;">{{price($myproduk->hargaJual)}}</div>
-								<!-- Add to cart -->
+								<div class="item-price pull-left" id="harga">{{price($myproduk->hargaJual)}}</div>
 								<div class="pull-right"><a href="{{product_url($myproduk)}}" class="btn btn-danger btn-sm">Lihat</a></div>
 								<div class="clearfix"></div>
 							</div>
@@ -52,16 +38,13 @@
 					</div>
 					@endforeach
 				</div>
-			<!-- Items List ends -->
-
 			@else
 				<div class="span12">
 					<div class="alert alert-danger">
 						<button type="button" class="close" data-dismiss="alert">&times;</button>
 						<h4>Oh, We're So Sorry</h4>
 						There is no product that matches the search criteria.
-					</div><!--end alert-->
-
+					</div>
 					<div class="search">
 						<div class="titleHeader clearfix">
 							<!-- <h3>Search</h3> -->
@@ -69,16 +52,16 @@
 
 						<div class="well well-small">
 							<form method="post" action="{{url('search')}}" class="form-inline">
-								<div class="input-group col-sm-6" style="float: none">
+								<div class="input-group col-sm-6" id="search-form">
 							    	<input type="text" class="form-control" placeholder="Search" name="search" required>
 							    	<span class="input-group-btn">
 							    		<button class="btn btn-info" type="submit"><i class="icon-search"></i></button>
 							    	</span>
 							    </div>
-							</form><!--end form-->
-						</div><!--end well-->
-					</div><!--end search-->
-				</div><!--end span3-->
+							</form>
+						</div>
+					</div>
+				</div>
 			@endif						 
 			</div>
 
@@ -102,7 +85,7 @@
 														@foreach($submenu->anak as $submenu2)
 														@if($submenu2->parent == $submenu->id)
 														<li>
-															<a href="{{category_url($submenu2)}}" class="active" style="text-decoration: none;">{{$submenu2->nama}}</a>
+															<a href="{{category_url($submenu2)}}" class="active" id="side-nav">{{$submenu2->nama}}</a>
 														</li>
 														@endif
 														@endforeach
@@ -123,7 +106,7 @@
 				@foreach(vertical_banner() as $item)
 				<div class="special">
 					<a href="{{url($item->url)}}">
-						<img width="213" src="{{banner_image_url($item->gambar)}}" />
+						<img width="213" src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo" />
 					</a>
 				</div>
 				<br>

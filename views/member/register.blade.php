@@ -1,29 +1,10 @@
-@if($errors->all())
-<div class="alert alert-error">
-	Kami menemukan error berikut:			
-	<ul>
-		@foreach($errors->all() as $message)
-		<li style="margin-left: 20px;">{{ $message }}</li>
-		@endforeach
-	</ul>
-</div>
-@endif
-
-@if(Session::has('error'))
-	<div class="alert alert-error">
-		<h3>Kami menemukan error berikut:</h3>
-		<p>{{Session::get('error')}}</p>
-	</div>
-@endif
-
-<!-- ===========================================================================  -->
 <div class="blocky">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="reg-login-info">
 					<h2>Login & nikmati kemudahan berbelanja <span class="color">!!!</span></h2>
-					<h3>Sudah Punya Akun</h3>
+					<h3>Sudah Punya Akun ?</h3>
 					<p>Silahkan login ke akun anda untuk dapat berbelanja dengan mudah, cepat dan dapat memantau status pesanan anda.</p><br>
 					<a href="{{url('member/')}}" class="btn btn-danger">Login</a>
 				</div>
@@ -35,27 +16,27 @@
 							<h3>Register</h3>
 							{{Form::open(array('url'=>'member','method'=>'post','class'=>'form-horizontal'))}}
 								<div class="form-group">
-									<label for="inputName" class="col-lg-2 control-label">Name</label>
+									<label for="inputName" class="col-lg-2 control-label">Nama</label>
 									<div class="col-lg-10">
-										<input type="text" class="form-control" id="inputName" name="nama" value="{{Input::old('nama')}}" required placeholder="Name">
+										<input type="text" class="form-control" id="inputName" name="nama" value="{{Input::old('nama')}}" required>
 									</div>
 								</div>                           
 								<div class="form-group">
 									<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
 									<div class="col-lg-10">
-										<input type="email" class="form-control" id="inputEmail1" placeholder="Email" name='email' value='{{Input::old("email")}}' required>
+										<input type="email" class="form-control" id="inputEmail1" name='email' value='{{Input::old("email")}}' required>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="inputPassword1" class="col-lg-2 control-label">Password</label>
 									<div class="col-lg-10">
-										<input type="password" class="form-control" id="inputPassword1" name="password" required placeholder="Password">
+										<input type="password" class="form-control" id="inputPassword1" name="password"  required>
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="inputPassword2" class="col-lg-2 control-label">Re-type Password</label>
+									<label for="inputPassword2" class="col-lg-2 control-label">Konfirmasi Password</label>
 									<div class="col-lg-10">
-										<input type="password" class="form-control" id="inputPassword2" name="password_confirmation" required placeholder="Password">
+										<input type="password" class="form-control" id="inputPassword2" name="password_confirmation" required>
 									</div>
 								</div>
 								<div class="form-group">

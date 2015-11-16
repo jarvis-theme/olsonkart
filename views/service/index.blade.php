@@ -1,13 +1,10 @@
-<!-- Page title -->
 <div class="page-title">
 	<div class="container">
 		<h2><i class="icon-desktop color"></i> Service <small></small></h2>
 		<hr />
 	</div>
 </div>
-<!-- Page title -->
 
-<!-- Page content -->
 <div class="faq">
 	<div class="container">
 		<div class="row">

@@ -1,18 +1,10 @@
-define(['jquery','bootstrap','navgoco','flexslider','levelmenu','noty'], function($)
+define(['jquery','bootstrap','navgoco','flexslider','levelmenu','filter','respond','html5shiv'], function($,b,navgoco)
 {
 	return new function(){
 		var self = this;
 		self.run = function(){
 			// Sidebar menu
 			$('.sidey .nav').navgoco();
-
-			// tampilkan error noty
-			var msg = $('#message');
-			if(msg.length){
-				type = $(msg).attr('class');		
-				text = $(msg).html();
-				noty({"text":text,"layout":"top","type":type});    
-			}
 
 			// Scroll to Top
 			$(".totop").hide();
