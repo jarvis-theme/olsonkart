@@ -8,8 +8,7 @@
     <div class="container">
 		<div class="row">
             @foreach(all_menu() as $key=>$group)
-                @if($key!=2)
-            	<div class="col-md-4 col-sm-4">
+            	<div class="col-md-3 col-sm-3">
                 	<div class="fwidget">
                 		<h4>{{$group->nama}}</h4>
                 		<hr />
@@ -23,9 +22,8 @@
                 		</ul>
                 	</div>
             	</div>    
-            	@endif    
             @endforeach
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-3 col-sm-3">
 				<div class="fwidget">
 					<h4>Hubungi Kami</h4>
 					<hr />
@@ -41,11 +39,9 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="client">
-					@if(!empty($bank))	
-						@foreach(list_banks() as $value)	
-						<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" class="img-responsive logo-bank" title="Payment" />
-						@endforeach	
-					@endif	
+					@foreach(list_banks() as $value)	
+					<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" class="img-responsive logo-bank" title="Payment" />
+					@endforeach	
 					@if(count(list_payments()) > 0)
 						@foreach(list_payments() as $pay)
 							@if($pay->nama == 'ipaymu' && $pay->aktif == 1)
@@ -64,7 +60,7 @@
 		</div>
 		<hr />
 		<div class="copy text-center">
-			{{ Theme::place('title') }} Copyright {{date('Y')}} © - Powered by <a target="_blank" href="http://jarvis-store.com">Jarvis Store</a>
+			{{-- Theme::place('title') --}} Copyright {{date('Y')}} © - Powered by <a target="_blank" href="http://jarvis-store.com">Jarvis Store</a>
 		</div>
 	</div>
 </footer>

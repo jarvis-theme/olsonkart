@@ -9,11 +9,8 @@
             <div class="row">
                 <div class="col-md-9 col-md-push-3">
                     <ul class="breadcrumb">
-                        @if(!empty($kategoridetail))
-                            {{breadcrumbProduk($produk,' <li>/</li>; ',';',true, $kategoridetail,@$category,@$collection)}}
-                        @else
-                            {{breadcrumbProduk(null,' <li>/&nbsp;</li>; ',';',true, $kategoridetail,@$category,@$collection)}}
-                        @endif
+                        {{breadcrumbProduk(@$produk,' <li>/</li>; ',';',true,@$category,@$collection)}}
+                        
                     </ul>
                     <div class="row">
                         @foreach(list_product(null,@$category,@$collection) as $myproduk)
@@ -34,7 +31,7 @@
                                 <div class="item-details">
                                     <h5 id="title-desc"><a href="{{product_url($myproduk)}}">{{shortName($myproduk->nama,20)}}</a></h5>
                                     <div class="clearfix"></div>
-                                    <p id="desc-product">{{shortDescription($myproduk->deskripsi,100)}}</p>
+                                    <p id="desc-product">{{short_description($myproduk->deskripsi,100)}}</p>
                                     <hr />
                                     <div class="item-price pull-left" id="harga">{{price($myproduk->hargaJual)}}</div>
                                     <div class="pull-right">
