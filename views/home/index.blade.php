@@ -34,6 +34,7 @@
         </div>
     </div>
 </div>
+@if(new_product()->count() > 0)
 <div class="recent-posts blocky">
     <div class="container">
         <div class="row">
@@ -68,3 +69,4 @@
         </div>
     </div>
 </div>
+@endif

@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-9 col-md-push-3">
                     <ul class="breadcrumb">
-                        {{breadcrumbProduk(@$produk,' <li>/</li>; ',';',true,@$category,@$collection)}}
+                        {{breadcrumbProduk(@$produk,' <li>/</li> ;',';',true,@$category,@$collection)}}
                         
                     </ul>
                     <div class="row">

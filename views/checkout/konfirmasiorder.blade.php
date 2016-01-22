@@ -141,34 +141,34 @@
         </div>
     </div>
     <div class="sep-bor"></div>
-        @if($paymentinfo!=null)
-        <h3><center>Paypal Payment Details</center></h3><br>
-        <hr>
-        <div class="table-responsive">
-            <table class='table table-bordered'>
-                <tr><td>Payment Status</td><td>:</td><td>{{$paymentinfo['payment_status']}}</td></tr>
-                <tr><td>Payment Date</td><td>:</td><td>{{$paymentinfo['payment_date']}}</td></tr>
-                <tr><td>Address Name</td><td>:</td><td>{{$paymentinfo['address_name']}}</td></tr>
-                <tr><td>Payer Email</td><td>:</td><td>{{$paymentinfo['payer_email']}}</td></tr>
-                <tr><td>Item Name</td><td>:</td><td>{{$paymentinfo['item_name1']}}</td></tr>
-                <tr><td>Receiver Email</td><td>:</td><td>{{$paymentinfo['receiver_email']}}</td></tr>
-                <tr><td>Total Payment</td><td>:</td><td>{{$paymentinfo['payment_gross']}} {{$paymentinfo['mc_currency']}}</td></tr>
-            </table>
-        </div>
-        <p>Thanks you for your order.</p><br>
-        @endif 
-      
-        @if($order->jenisPembayaran==2)
-        <h3><center>Konfirmasi Pemabayaran Via Paypal</center></h3><br>
-        <p>Silakan melakukan pembayaran dengan paypal Anda secara online via paypal payment gateway. Transaksi ini berlaku jika pembayaran dilakukan sebelum {{$expired}}. Klik tombol "Bayar Dengan Paypal" di bawah untuk melanjutkan proses pembayaran.</p>
-        {{$paypalbutton}}<br>
-        @elseif($order->jenisPembayaran==6)
-            @if($order->status == 0)
-            <h3><center>Konfirmasi Pembayaran Via Bitcoin</center></h3><br>
-            <p>Silahkan melakukan pembayaran dengan bitcoin Anda secara online via bitcoin payment gateway. Transaksi ini berlaku jika pembayaran dilakukan sebelum <b>{{$expired_bitcoin}}</b>. Klik tombol "Pay with Bitcoin" di bawah untuk melanjutkan proses pembayaran.</p>
-            {{$bitcoinbutton}}
-            <br>
-            @endif
+    @if($paymentinfo!=null)
+    <h3><center>Paypal Payment Details</center></h3><br>
+    <hr>
+    <div class="table-responsive">
+        <table class='table table-bordered'>
+            <tr><td>Payment Status</td><td>:</td><td>{{$paymentinfo['payment_status']}}</td></tr>
+            <tr><td>Payment Date</td><td>:</td><td>{{$paymentinfo['payment_date']}}</td></tr>
+            <tr><td>Address Name</td><td>:</td><td>{{$paymentinfo['address_name']}}</td></tr>
+            <tr><td>Payer Email</td><td>:</td><td>{{$paymentinfo['payer_email']}}</td></tr>
+            <tr><td>Item Name</td><td>:</td><td>{{$paymentinfo['item_name1']}}</td></tr>
+            <tr><td>Receiver Email</td><td>:</td><td>{{$paymentinfo['receiver_email']}}</td></tr>
+            <tr><td>Total Payment</td><td>:</td><td>{{$paymentinfo['payment_gross']}} {{$paymentinfo['mc_currency']}}</td></tr>
+        </table>
+    </div>
+    <p>Thanks you for your order.</p><br>
+    @endif 
+  
+    @if($order->jenisPembayaran==2)
+    <h3><center>Konfirmasi Pemabayaran Via Paypal</center></h3><br>
+    <p>Silakan melakukan pembayaran dengan paypal Anda secara online via paypal payment gateway. Transaksi ini berlaku jika pembayaran dilakukan sebelum {{$expired}}. Klik tombol "Bayar Dengan Paypal" di bawah untuk melanjutkan proses pembayaran.</p>
+    {{$paypalbutton}}<br>
+    @elseif($order->jenisPembayaran==6)
+        @if($order->status == 0)
+        <h3><center>Konfirmasi Pembayaran Via Bitcoin</center></h3><br>
+        <p>Silahkan melakukan pembayaran dengan bitcoin Anda secara online via bitcoin payment gateway. Transaksi ini berlaku jika pembayaran dilakukan sebelum <b>{{$expired_bitcoin}}</b>. Klik tombol "Pay with Bitcoin" di bawah untuk melanjutkan proses pembayaran.</p>
+        {{$bitcoinbutton}}
+        <br>
         @endif
+    @endif
    </div>
 </div>

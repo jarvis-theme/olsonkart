@@ -1,8 +1,8 @@
 <div id="carousel-example-generic" class="carousel slide">
 	<ol class="carousel-indicators">
-		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		@for($i = 0; $i < slideshow()->count(); $i++)
+		<li data-target="#carousel-example-generic" data-slide-to="{{$i}}" {{$i == 0 ? 'class="active"' : ''}}></li>
+		@endfor
 	</ol>
 	<div class="carousel-inner" id="carousel-div">
 		@foreach (slideshow() as $val)
@@ -13,8 +13,10 @@
 		</div>
 		@endforeach
 	</div>
+	@if(slideshow()->count() > 1)
 	<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="icon-prev"></span></a>
 	<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="icon-next"></span></a>
+	@endif
 </div>
 
 <div class="hero">
