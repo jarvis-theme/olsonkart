@@ -7,7 +7,11 @@
 	<div class="carousel-inner" id="carousel-div">
 		@foreach (slideshow() as $val)
 		<div class="item {{$val->idSlide==1 ? 'active':''}} animated fadeInRight">
-			<a href="{{$val->text == '' ? '#' : $val->text}}">
+	    	@if(!empty($val->url))
+			<a href="{{filter_link_url($val->url)}}" target="_blank">
+	  		@else
+	  		<a href="#">
+	  		@endif
 				<img src="{{url(slide_image_url($val->gambar))}}" alt="Slide" class="img-responsive" id="slides" />
 			</a>
 		</div>
