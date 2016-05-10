@@ -91,9 +91,7 @@
 						</div>
 						<div class="tab-pane fade" id="tab2">
 							<div class="item-review">
-								{{pluginTrustklik()}}
-								{{--$fbscript--}}
-								{{--fbcommentbox(slugProduk($produk), '640px', '5', 'light')--}}
+								{{ pluginComment(product_url($produk)) }}
 							</div>					
 						</div>
 					</div>

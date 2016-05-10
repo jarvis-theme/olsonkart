@@ -1004,8 +1004,8 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
 
 .totop {
     position: fixed;
-    bottom: 50px;
-    right: 0px;
+    bottom: 0px;
+    right: 20px;
     z-index: 104400;
     background: #16cbe6; 
 }
