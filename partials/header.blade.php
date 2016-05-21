@@ -21,9 +21,11 @@
                 <div class="navi">
                     <div id="ddtopmenubar" class="mattblackmenu">
                         <ul>
-                            @foreach(main_menu()->link as $key=>$link)
+                        @foreach(main_menu()->link as $key=>$link)
+                            @if($key < 4)
                             <li><a href="{{menu_url($link)}}">{{$link->nama}}</a></li>
-                            @endforeach
+                            @endif
+                        @endforeach
                         </ul>
                     </div>
                 </div>

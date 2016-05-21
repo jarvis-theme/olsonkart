@@ -13,7 +13,7 @@
 			@else
 			<a href="#">
 			@endif
-				<img src="{{url(slide_image_url($val->gambar))}}" alt="Slide" class="img-responsive" id="slides" />
+				<img src="{{url(slide_image_url($val->gambar))}}" alt="{{$val->title}}" class="img-responsive" id="slides" />
 			</a>
 		</div>
 		{{-- */ $j++; /* --}}
@@ -35,7 +35,7 @@
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique est sit amet diam interdum semper. Vestibulum condimentum ante urna, vel interdum odio accumsan id.</p> -->
 					@foreach(horizontal_banner() as $item)
 					<a target="_blank" href="{{url($item->url)}}">
-						<img class="img-responsive" src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo"  />
+						<img class="img-responsive" src="{{url(banner_image_url($item->gambar))}}" alt="Info Promo" />
 					</a>
 					@endforeach
 				</center>

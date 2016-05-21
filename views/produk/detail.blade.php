@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-md-9 col-md-push-3">
 					<ul class="breadcrumb">
-        				{{breadcrumbProduk($produk,'; <span>/</span> ',';',true)}}
+						{{breadcrumbProduk($produk,'; <span>/</span> ',';',true)}} 
 					</ul>
 			
 					<div class="single-item" id="product-item">
@@ -60,7 +60,7 @@
 											<option value="">-- Pilih Opsi --</option>
 											@foreach ($opsiproduk as $key => $opsi)
 											<option value="{{$opsi->id}}" {{ $opsi->stok==0 ? 'disabled':''}} >
-												{{$opsi->opsi1.($opsi->opsi2=='' ? '':' / '.$opsi->opsi2).($opsi->opsi3=='' ? '':' / '.$opsi->opsi3)}} {{price($opsi->harga)}}
+												{{$opsi->opsi1.($opsi->opsi2=='' ? '':' / '.$opsi->opsi2).($opsi->opsi3=='' ? '':' / '.$opsi->opsi3)}} {{price($opsi->harga)}} 
 											</option>
 											@endforeach
 										</select>
@@ -91,12 +91,12 @@
 						</div>
 						<div class="tab-pane fade" id="tab2">
 							<div class="item-review">
-								{{ pluginComment(product_url($produk)) }}
-							</div>					
+								{{ pluginComment(product_url($produk), @$produk) }}
+							</div>
 						</div>
 					</div>
 				</div>
-			   
+			
 				<div class="col-md-3 col-md-pull-9">
 					<div class="sidey">
 						<ul class="nav">
@@ -155,7 +155,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title"><h4><i class="icon-gift color"></i> &nbsp;Produk Lainnya</h4></div>
-			  
+			
 					<div class="row">
 						<div class="col-md-12">
 							<div class="my_carousel">

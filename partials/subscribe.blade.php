@@ -20,8 +20,8 @@
                         <div class="report">
                             <div class="report-bor">
                                 <div class="row subscribes">
-                                 <!-- Report data starts -->
-                                    <span>{{short_description(about_us()->isi,200)}}<a href="{{URL::to('halaman/about-us')}}"></a></span>
+                                    <!-- Report data starts -->
+                                    <span>{{short_description(about_us()->isi,200)}}</span>
                                 </div>
                                 
                                 <hr class="hidden-xs">
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
