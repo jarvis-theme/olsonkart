@@ -1,14 +1,7 @@
-<div class="page-title">
-	<div class="container">
-		<h2><!-- <i class="icon-desktop color"></i> Produk Kami <small></small> --></h2>
-		<hr />
-	</div>
-</div>
 <div class="shop-items">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-md-push-3">
-				<!-- <ul class="breadcrumb"><li class="active"><a href="{{url('home')}}">Produk</a></li></ul> -->
 				<div class="row">
 					@foreach(home_product() as $myproduk)
 					<div class="col-md-4 col-sm-4 col-xs-12">

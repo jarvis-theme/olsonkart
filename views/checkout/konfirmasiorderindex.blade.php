@@ -2,12 +2,12 @@
     <div class="container center">
         <h2 class="align-left"><i class="icon-shopping-cart color"></i> Konfirmasi Pembayaran</h2>
         <hr />
-        <h5>Terima kasih telah membeli di {{ Theme::place('title') }}.</h5>
+        <h3>Terima kasih telah belanja di {{ Theme::place('title') }}.</h3>
         <div class="sep-bor"></div>
         @if($checkouttype==2)
-            <p>Silakan Hubungi Pihak Toko untuk Mengkonfirmasi Order Anda</p>
+            <h4>Silakan Hubungi Pihak Toko untuk Mengkonfirmasi Order Anda</h4>
         @else
-            <p>Silakan masukkan kode order yang mau anda cari!</p>
+            <h4>Silakan masukkan kode order yang anda cari!</h4>
             @if($checkouttype==1)
             {{-- */ $konfirmasi = 'konfirmasiorder' /* --}}
             @endif
@@ -17,7 +17,7 @@
             {{Form::open(array('url'=>$konfirmasi,'method'=>'post','class'=>'form-inline'))}}
         @endif
         <div class="form-group">
-            <input type="text" class="form-control" id="search" placeholder="Kode Order" name='kodeorder' required>
+            <input type="text" class="form-control" id="search" placeholder="Kode Order" name="kodeorder" required>
         </div>
         <button type="submit" class="btn btn-info">Cari</button>
         {{Form::close()}}

@@ -1,6 +1,6 @@
     <div class="page-title">
         <div class="container">
-            <h2><i class="icon-book color"></i> Blog <small></small></h2><hr />
+            <h2><i class="icon-rss color"></i> Blog <small></small></h2><hr />
         </div>
     </div>
     <div class="blog">

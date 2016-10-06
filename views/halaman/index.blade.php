@@ -1,6 +1,6 @@
     <div class="page-title">
         <div class="container">
-            <h2><i class="icon-desktop color"></i> {{$data->judul}} </h2>
+            <h2><i class="icon-list-alt color"></i> {{$data->judul}} </h2>
             <hr />
         </div>
     </div>

@@ -18,5 +18,6 @@
 
         {{ Theme::partial('defaultjs') }} 
         {{ Theme::partial('analytic') }} 
+        {{ pluginPowerup() }} 
     </body>
 </html>

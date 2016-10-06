@@ -485,7 +485,8 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
    padding:0px;
    margin:0px;
    font-size:14px;
-   font-weight:bold
+   font-weight:700;
+   color: #16cbe6;
 }
 
 .about-us .about-team  .details em{
@@ -501,7 +502,6 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
    width: 25px;
    height: 25px;
    line-height:25px;
-   background:#16cbe6;
    display:inline-block
 }
 
@@ -568,7 +568,7 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
 
 .blog .entry h2 a:hover{
    border:0px;
-   color:#777
+   color:#16cbe6;
 }
 
 .blog .meta{
@@ -866,6 +866,7 @@ body{font-family:'Open Sans','sans-serif' !important;color:#444;font-size:13px;l
 
 .faq .panel-heading{
    padding:15px 10px
+   cursor: pointer;
 }
 
 .faq h4{
@@ -1368,3 +1369,45 @@ form[name="order"] > input[name="SAVE"]:hover {
 }
 .btn-pay { background: #00aee7; border: none; padding: 10px; border-radius: 5px; color: #fff }
 .btn-pay:hover { cursor: pointer; opacity: 0.7; color: #fff }
+.sidey .nav .open a .caret{ border-top-color: #000 }
+.sidey .nav > li > ul > li ul li a{
+  font-size: 13px;
+  line-height: 20px;
+  padding: 10px 10px 10px 25px;
+  color: #666;
+  display: block;
+  text-decoration: none;
+  border:1px solid #ddd;
+  border-top:0px
+}
+.sidey .nav li.open > ul > li.open a .caret {
+  border-bottom-color: #000 !important;
+}
+.testi-desc {
+  margin: 0 auto;
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 5px;
+  font-size: 15px;
+}
+.testi-desc:before{
+  font-family: 'FontAwesome';
+  content: "\f10d";
+  font-size: 23px;
+  margin-right: 10px;
+  color: #eee;
+  position: relative;
+  top: 7px;
+}
+.testi-desc2:after {
+  font-family: 'FontAwesome';
+  content: "\f10e";
+  font-size: 23px;
+  margin-left: 10px;
+  color: #eee;
+  float: right;
+  position: relative;
+  top: 15px;
+}
+.testi-wrap { padding: 10px; background-color: #fff;margin-bottom: 10px; border-radius: 7px; }
+h1.testimonial-title > i { font-size: inherit; }

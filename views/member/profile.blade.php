@@ -1,6 +1,6 @@
     <div class="page-title">
         <div class="container">
-            <h2><i class="icon-desktop color"></i>My Account</h2>
+            <h2><i class="icon-user color"></i>My Account</h2>
             <hr />
         </div>
     </div>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h3><i class="icon-user color"></i> &nbsp;Edit Profile</h3>
+                    <h3><i class="icon-edit color"></i> &nbsp;Edit Profile</h3>
                     {{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal'))}}
                         <div class="form-group">
                             <label for="inputName" class="col-md-2 control-label">Name</label>

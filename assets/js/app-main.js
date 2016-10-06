@@ -2,8 +2,8 @@ var dirTema = document.querySelector("meta[name='theme_path']").getAttribute('co
 
 require.config({
 	baseUrl: '/',
-    urlArgs: "v=010",
-    waitSeconds : 60,
+	urlArgs: "v=010a",
+	waitSeconds : 300,
 
 	shim: {
 		"bootstrap"	: {
@@ -26,27 +26,33 @@ require.config({
 		},
 		"filter" : {
 			deps: ['jquery']
+		},
+		"caroufredsel" : {
+			deps: ['jquery']
+		},
+		"fancybox" : {
+			deps: ['jquery']
 		}
 	},
 
 	paths: {
 		// LIBRARY
-		bootstrap 		: '//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
-		cart			: 'js/shop_cart',
-		caroufredsel	: dirTema+'/assets/js/lib/jquery.carouFredSel-6.2.1-packed',
-		flexslider		: dirTema+'/assets/js/lib/jquery.flexslider',
-		fancybox		: dirTema+'/assets/js/lib/jquery.fancybox',
-		jq_ui			: 'js/jquery-ui',
+		bootstrap 		: '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
+		cart			: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/js/shop_cart',
+		caroufredsel	: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/jquery.carouFredSel-6.2.1-packed',
+		flexslider		: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/jquery.flexslider',
+		fancybox		: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/jquery.fancybox',
+		jq_ui			: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/js/jquery-ui',
 		jquery 			: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',
-		navgoco			: dirTema+'/assets/js/lib/jquery.navgoco.min',
-		noty			: 'js/jquery.noty',
-		levelmenu		: dirTema+'/assets/js/lib/ddlevelsmenu',
-		filter			: dirTema+'/assets/js/lib/filter',
-		respond			: dirTema+'/assets/js/lib/respond.min',
-		html5shiv		: dirTema+'/assets/js/lib/html5shiv',
+		navgoco			: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/jquery.navgoco.min',
+		noty			: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/js/jquery.noty',
+		levelmenu		: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/ddlevelsmenu',
+		filter			: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/filter',
+		respond			: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/respond.min',
+		html5shiv		: '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/assets/olsonkart/assets/js/lib/html5shiv',
 
 		// ROUTE
-		router          : 'js/router',
+		router          : '//s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/js/router',
 
 		// CONTROLLER
 		home            : dirTema+'/assets/js/pages/home',

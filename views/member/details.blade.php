@@ -1,6 +1,6 @@
 <div class="page-title">
     <div class="container">
-        <h2><i class="icon-desktop color"></i> My Account <small></small></h2>
+        <h2><i class="icon-user color"></i> My Account <small></small></h2>
         <hr />
     </div>
 </div>
@@ -18,7 +18,7 @@
             <div class="col-md-9 table-responsive">
                 @if($pengaturan->checkoutType!=2)
                     @if(list_order()->count() > 0)
-                    <h3><i class="icon-user color"></i> &nbsp;Order History</h3>
+                    <h3><i class="icon-shopping-cart color"></i> &nbsp;Order History</h3>
                     <table class="table table-striped tcart">
                         <thead>
                             <tr>

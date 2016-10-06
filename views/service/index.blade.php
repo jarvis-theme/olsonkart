@@ -1,6 +1,6 @@
 <div class="page-title">
 	<div class="container">
-		<h2><i class="icon-desktop color"></i> Service <small></small></h2>
+		<h2><i class="icon-check color"></i> Service <small></small></h2>
 		<hr />
 	</div>
 </div>
@@ -11,38 +11,38 @@
 			<div class="col-md-12">
 				<div class="panel-group" id="accordion">
 					<div class="panel panel-default">
-						<div class="panel-heading">
+						<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#tos">
 							<h4 class="panel-title">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								<a class="accordion-toggle" href="#tos">
 									Kebijakan Layanan
 								</a>
 							</h4>
 						</div>
-						<div id="collapseOne" class="panel-collapse collapse in">
+						<div id="tos" class="panel-collapse collapse in">
 							<div class="panel-body">
 								{{$service->tos}}
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
-						<div class="panel-heading">
+						<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#refund">
 							<h4 class="panel-title">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+								<a class="accordion-toggle" href="#refund">
 									Kebijakan Pengembalian
 								</a>
 							</h4>
 						</div>
-						<div id="collapseTwo" class="panel-collapse collapse">
+						<div id="refund" class="panel-collapse collapse">
 							<div class="panel-body">{{$service->refund}}</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
-						<div class="panel-heading">
+						<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#privacy">
 							<h4 class="panel-title">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Kebijakan Privasi</a>
+								<a class="accordion-toggle" href="#privacy">Kebijakan Privasi</a>
 							</h4>
 						</div>
-						<div id="collapseThree" class="panel-collapse collapse">
+						<div id="privacy" class="panel-collapse collapse">
 							<div class="panel-body">{{$service->privacy}}</div>
 						</div>
 					</div>
