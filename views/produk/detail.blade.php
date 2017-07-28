@@ -67,7 +67,7 @@
 										@endif
 									</div>
 									<div class="input-group">
-										<input id="input-qty" type="text" class="form-control" name='qty' value="1" placeholder="QTY" >
+										<input id="input-qty" type="number" class="form-control" name="qty" value="1" pattern="[0-9]" title="jumlah" placeholder="QTY" >
 										<span class="input-group-btn">
 											<input class="btn btn-info" type="submit" value="Beli">
 										</span>
