@@ -43,6 +43,11 @@
                                     @if($sosial->pt)
                                         <a target="_blank" class="pinterest" href="{{URL::to($sosial->pt)}}" title="Pinterest"><i class="icon-pinterest"></i></a>
                                     @endif
+                                    @if($sosial->picmix)
+                                        <a target="_blank" href="{{url($sosial->picmix)}}" title="Picmix">
+                                            <img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png">
+                                        </a>
+                                    @endif 
                                     </div>
                                 </div>
                             </div>

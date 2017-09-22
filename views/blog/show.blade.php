@@ -11,7 +11,10 @@
                         <div class="entry">
                             <h2>{{$detailblog->judul}}</h2>
                             <div class="meta">
-                                <i class="icon-calendar"></i> {{waktuTgl($detailblog->updated_at)}}  <i class="icon-folder-open"></i> <a href="{{url(blog_category_url($detailblog->kategori))}}">{{$detailblog->kategori->nama}}</a>
+                                <i class="icon-calendar"></i> {{waktuTgl($detailblog->updated_at)}}
+                                @if(!empty($detailblog->kategori->nama))
+                                <i class="icon-folder-open"></i> <a href="{{url(blog_category_url($detailblog->kategori))}}">{{$detailblog->kategori->nama}}</a>
+                                @endif
                             </div>
                             <p>{{$detailblog->isi}}</p>
                         </div>
